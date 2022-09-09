@@ -1,5 +1,5 @@
+## Front 🚀
 
-#Front
 
 guia (1).png
 
@@ -7,8 +7,8 @@ guia (2).png
 
 guia (3).png
 
+## BackEnd 🚀
 
-#BackEnd
 1. Crear Api de registro de tareas diarias en NET6 (debe tener swagger , nlog y en proyecto separado  en la misma solución)
 registrar  en SQLLite
 
