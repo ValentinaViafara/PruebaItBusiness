@@ -1,6 +1,7 @@
 ## Front 🚀
 
-<img src="https://gitlab.com/juliomacias/taskagent/-/blob/main/guia%20(1).png" alt="Employee data" title="Employee Data title">
+![name-of-you-image](https://gitlab.com/juliomacias/taskagent/-/blob/main/guia%20(1).png)
+
 
 guia (1).png
 
