@@ -1,5 +1,6 @@
 ## Front 🚀
 
+1. Crear una pantalla para el registro de tareas Ver imagenes guia
 ![front principal](https://gitlab.com/juliomacias/taskagent/-/blob/main/guia%20(1).png)
 
 
@@ -9,6 +10,7 @@ guia (2).png
 
 guia (3).png
 
+estas pantallas deben consumir las apis del BackEnd
 ## BackEnd 🚀
 
 1. Crear Api de registro de tareas diarias en NET6 (debe tener swagger , nlog y en proyecto separado  en la misma solución)
