@@ -1,0 +1,68 @@
+<div class="content-wrapper">
+  <div class="container-xxl flex-grow-1 container-p-y">
+    <h1 class="fw-bold py-3 mb-4 text-center">Task Shedule</h1>
+    <form class="card" [formGroup]="formAutenticacion">
+      <div class="card-header " style="display: inline-block;"><h4><b>Add New Timeslip</b></h4>
+      </div>
+      <div class="container" style="margin: 10px;">
+        <p>Date on: 
+          <input class="form-control" type="date"  id="date" formControlName="dateTask">
+        </p>
+        <div class="row container" >
+          <select class="form-control" style="width: 30%; margin-right: 10px; padding: 5px;" id="area">
+            <option *ngFor="let area of areas" value={{area.id}}>{{area.nombre}}</option>
+          </select>
+          <pre></pre>
+          <select class="form-control" style="width: 40%; margin-right: 10px; padding: 5px;" id="activity">
+            <option *ngFor="let activity of activities" value={{activity.id}}>{{activity.nombre}}</option>
+          </select>
+          <input type="time" style="width: 10%;" id="time">>
+        </div>
+        <div class="row container" >
+          <input id="comment" type="text" style="width: 82%; padding: 5px; margin-top: 10px; margin-right: 15px;"placeholder="Comment (Opcional)" formControlName="description">
+          <button class="btn success" (click)="insertTask()">Star Timer</button>
+        </div>
+      </div>
+    </form>
+    <br>
+    <br>
+    <div class="card">
+      <div class="card-header"><h4><b>Table of Timeslip</b></h4></div>
+
+      <div class="row container" style="margin: 10px;">
+        <p>Date on: 
+          <input type="date" id="Test_DatetimeLocal"> - <input type="date" id="Test_DatetimeLocal">
+        </p>
+      </div>
+      <div class="table-responsive text-nowrap">
+        <table *ngFor="let tarea of tareas" class="table">
+          <thead>
+            <tr>
+              <th>User Name</th>
+            </tr>
+          </thead>
+          <tbody class="table-border-bottom-0">
+            <tr *ngFor="let tarea of tareas">
+              <td>{{tarea.client.userName}}</td>
+              <td>{{tarea.area.nombre}}</td>
+              <td>{{tarea.activity.nombre}}</td>
+              <td>
+                <a title="editar"
+                   target="_blank">
+                  <i class="material-icons">arrow_forward</i>
+                </a>
+                <a title="eliminar"
+                   target="_blank">
+                  <i class="material-icons">delete</i>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+          <br>
+        </table>
+      </div>
+      <br>
+      
+    </div>
+  </div>
+</div>

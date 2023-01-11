@@ -8,6 +8,7 @@ import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { RegisterComponent } from './components/register/register.component';
+import { taskScheduleComponent } from './components/taskSchedule/taskSchedule.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { RegisterComponent } from './components/register/register.component';
     LoginComponent,
     HomeComponent,
     ForgotPasswordComponent,
-    RegisterComponent
+    RegisterComponent,
+    taskScheduleComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -23,10 +25,11 @@ import { RegisterComponent } from './components/register/register.component';
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', component: LoginComponent, pathMatch: 'full' },
+      { path: '', component: taskScheduleComponent, pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
       { path: 'forgot-passwd', component: ForgotPasswordComponent },
-      { path: 'register', component: RegisterComponent }
+      { path: 'register', component: RegisterComponent },
+      { path: 'task', component: taskScheduleComponent }
     ])
   ],
   providers: [],

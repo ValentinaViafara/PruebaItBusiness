@@ -8,6 +8,7 @@
     <add assembly="NLog.Web.AspNetCore"/>
   </extensions>
   <targets>
+    <target name="logconsole" xsi:type="Console" layout="${longdate}|${event-properties:item=EventId.Id}|${logger}|${uppercase:${level}}|  ${message} ${exception}|url: ${aspnet-request-url}|action: ${aspnet-mvc-action}"/>
     <target xsi:type="File" name="allfile" fileName="C:\nlog-all-${shortdate}.log"
                 layout="${longdate}|${event-properties:item=EventId.Id}|${logger}|${uppercase:${level}}|${message} ${exception}" />
     <target xsi:type="File" name="ownFile-web" fileName="C:\nlog-own-${shortdate}.log"
@@ -18,5 +19,7 @@
     <logger name="*" minlevel="Trace" writeTo="allfile" />
     <logger name="Microsoft.*" minlevel="Trace" writeTo="blackhole" final="true" />
     <logger name="*" minlevel="Trace" writeTo="ownFile-web" />
+    <logger name="*" minlevel="Info" writeTo="logconsole" />
+    <logger name="*" minlevel="Debug" writeTo="logfile" />
   </rules>
 </nlog>

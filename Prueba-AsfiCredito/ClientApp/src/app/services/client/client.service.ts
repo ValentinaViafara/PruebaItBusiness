@@ -12,6 +12,7 @@ export class ClientService {
   public port = window.location.port;
 
   public getAllClientes() {
+    console.log("ENTRE A URL DE GET ALL CLIENTS")
     return this.http.get('https://' + this.url + ":" + this.port + "/api/client");
   }
 
