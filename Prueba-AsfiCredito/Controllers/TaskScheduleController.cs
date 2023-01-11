@@ -55,37 +55,9 @@ namespace Prueba_AsfiCredito.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> InsertClient([FromBody] TaskSchedule body)
+        public async Task<IActionResult> InsertTask([FromBody] TaskSchedule body)
         {
-            // if(body== null)
-            // {
-            //     return BadRequest();
-            // }
-
-            // if(body.dateTask == null)
-            // {
-            //     return BadRequest();
-            // }
-            // if(body.task.IdClient == string.Empty)
-            // {
-            //     ModelState.AddModelError("Cliente", "El cliente no debe estar vacio");
-            // }
-            // if(body.task.IdArea == string.Empty)
-            // {
-            //     ModelState.AddModelError("Area", "El area no debe estar vacio");
-            // }
-            // if(body.task.IdActivity == string.Empty)
-            // {
-            //     ModelState.AddModelError("Actividad", "La actividad no debe estar vacio");
-            // }
-
             
-            Console.WriteLine("asd");
-            Console.WriteLine("asd");
-            // Console.WriteLine(body.IdDateTask);
-            // Console.WriteLine(await date_db.getByString());
-            Console.WriteLine("asd");
-            Console.WriteLine("asd");
 
             return Created("Cliente Creado", true);
         }
