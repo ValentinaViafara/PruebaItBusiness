@@ -12,7 +12,7 @@ export class TaskSchedule {
   public port = window.location.port;
 
   public getAllTasks() {
-    return this.http.get('https://' + this.url + ":" + this.port + "/api/client");
+    return this.http.get('https://' + this.url + ":" + this.port + "/api/taskSchedule");
   }
   public InsertTask(array: any) {
     // return this.http.post('https://' + this.url + ":" + this.port + "/api/taskSchedule", {task: array, dateTask: dateTask});

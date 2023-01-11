@@ -37,10 +37,10 @@ namespace Prueba_AsfiCredito.Database
                 List<TaskSchedule> taskSchedules = dbContext.TaskSchedules.ToList();
 
                 taskSchedules.ForEach(e=>{
-                    // e.Client = dbContext.Clients.Single(a => a.Id == e.IdClient);
-                    // e.Area = dbContext.Areas.Single(a => a.Id == e.IdArea);
-                    // e.Activity = dbContext.Activities.Single(a => a.Id == e.IdActivity);
-                    // e.DateTask = dbContext.DatesTask.Single(a => a.Id == e.IdDateTask);
+                    e.Client = dbContext.Clients.Single(a => a.Id == e.IdClient);
+                e.Area = dbContext.Areas.Single(a => a.Id == e.IdArea);
+                e.Activity = dbContext.Activities.Single(a => a.Id == e.IdActivity);
+                e.DateTask = dbContext.DatesTask.Single(a => a.Id == e.IdDateTask);
                 });
 
                 Console.WriteLine("DateTask");

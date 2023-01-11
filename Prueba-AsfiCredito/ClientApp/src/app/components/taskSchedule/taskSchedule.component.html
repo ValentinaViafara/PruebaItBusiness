@@ -38,11 +38,11 @@
         <table *ngFor="let tarea of tareas" class="table">
           <thead>
             <tr>
-              <th>User Name</th>
+              <th>{{tarea.dateTask.weekDay}} - {{tarea.dateTask.day}} / {{tarea.dateTask.month}} / {{tarea.dateTask.year}}</th>
             </tr>
           </thead>
           <tbody class="table-border-bottom-0">
-            <tr *ngFor="let tarea of tareas">
+            <tr >
               <td>{{tarea.client.userName}}</td>
               <td>{{tarea.area.nombre}}</td>
               <td>{{tarea.activity.nombre}}</td>
